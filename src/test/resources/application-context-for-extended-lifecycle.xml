@@ -1,0 +1,15 @@
+<beans>
+    <bean id="test1" class="com.study.ioccontainer.class_for_test.Test1">
+        <property name="testName1" value="testValue1" />
+        <property name="testName2" ref="test2" />
+    </bean>
+    <bean id="test2" class="com.study.ioccontainer.class_for_test.Test2">
+        <property name="testName1" value="testValue2" />
+        <property name="testName2" ref="test1" />
+    </bean>
+
+    <bean id="factoryPostProcessor" class="com.study.ioccontainer.class_for_test.factory_postprocessor.BeanFactoryPostProcessorTest" />
+    <bean id="testWithPostConstruct" class="com.study.ioccontainer.class_for_test.postconstruct.TestClassWithPostConstruct" />
+    <bean id="testPostProcessorReplace" class="com.study.ioccontainer.class_for_test.postprocessor.TestPostProcessorReplace" />
+    <bean id="beanPostProcessorTest" class="com.study.ioccontainer.class_for_test.postprocessor.BeanPostProcessorTest" />
+</beans>

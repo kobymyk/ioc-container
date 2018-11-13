@@ -1,0 +1,10 @@
+<beans>
+    <bean id="test1" class="com.study.ioccontainer.class_for_test.Test1">
+        <property name="testName1" value="testValue1" />
+        <property name="testName2" ref="test2" />
+    </bean>
+    <bean id="test2" class="com.study.ioccontainer.class_for_test.Test2">
+        <property name="testName1" value="testValue2" />
+        <property name="testName2" ref="test1" />
+    </bean>
+</beans>
